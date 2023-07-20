@@ -35,8 +35,8 @@ target("meta_parser", function ()
         local parser = ""
         if is_plat("linux", "macos") then
             parser = "$(projectdir)/bin/tool/meta_parser"
-        elseif is_plat("macosx") then
-            parser = "$(projectdir)/bin/tool/meta_parser.exe"
+        elseif is_plat("windows") then
+            parser = ". $(projectdir)/bin/tool/meta_parser.exe"
         end
         local params = "\"$(projectdir)/engine/src/runtime\""
         local ipnut = "\"$(projectdir)/build/parser_header.h\""
@@ -51,8 +51,9 @@ target("meta_parser", function ()
         local opt = 0
 
         -- project_input_src include_file_path include_path include_sys module_name is_show_errors
-        local cmd= ". " .. parser .. " " .. params .. " " .. ipnut .. " " .. source_dir .. " " .. include_dir .. " " .. namespace .." 0"
+        local cmd= parser .. " " .. params .. " " .. ipnut .. " " .. source_dir .. " " .. include_dir .. " " .. namespace .." 0"
         print(cmd)
+        print("")
         -- os.exec(cmd);
 
         os.mkdir("$(projectdir)/script")
