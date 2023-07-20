@@ -32,10 +32,28 @@ target("meta_parser", function ()
         print("*************************************************************")
         print("")
 
+        local parser = ""
+        if is_plat("linux", "macos") then
+            parser = "$(projectdir)/bin/tool/meta_parser"
+        elseif is_plat("macosx") then
+            parser = "$(projectdir)/bin/tool/meta_parser.exe"
+        end
+        local params = "\"$(projectdir)/engine/src/runtime\""
+        local ipnut = "\"$(projectdir)/build/parser_header.h\""
+        local source_dir = "\"$(projectdir)/engine/src\""
+        local include_dir = "*"
+        if is_plat("linux") then
+            include_dir = "/usr/include/c++/9/"
+        elseif is_plat("macosx") then
+            include_dir = "${osx_sdk_platform_path_test}/../../Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"
+        end
+        local namespace = "ArchViz"
+        local opt = 0
+
         -- project_input_src include_file_path include_path include_sys module_name is_show_errors
-        local cmd= ". $(projectdir)/bin/tool/meta_parser.exe \"$(projectdir)/engine/src/runtime\" \"$(projectdir)/build/parser_header.h\" \"$(projectdir)/engine/src\" \"*\" \"ArchViz\" 0"
+        local cmd= ". " .. parser .. " " .. params .. " " .. ipnut .. " " .. source_dir .. " " .. include_dir .. " " .. namespace .." 0"
         print(cmd)
-        os.exec(cmd);
+        -- os.exec(cmd);
 
         print("*************************************************************")
         print("**** [Precompile] Finish ")
