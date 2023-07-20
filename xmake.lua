@@ -17,7 +17,7 @@ end
 -- option("test2", {default = true, showmenu = true})
 -- option("test3", {default = "hello"})
 
-includes("xmake/precompile.lua")
+-- includes("xmake/precompile.lua")
 includes("engine/3rd_party/xmake.lua")
 
 add_requires("json11", {configs = {shared = false, debug = true}})

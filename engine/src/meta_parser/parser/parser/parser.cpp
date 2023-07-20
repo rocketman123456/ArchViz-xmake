@@ -7,6 +7,8 @@
 
 #include "parser.h"
 
+#include <filesystem>
+
 #define RECURSE_NAMESPACES(kind, cursor, method, namespaces) \
     { \
         if (kind == CXCursor_Namespace) \
@@ -39,22 +41,19 @@ std::string MetaParser::getIncludeFile(std::string name)
     return iter == m_type_table.end() ? std::string() : iter->second;
 }
 
-MetaParser::MetaParser(const std::string project_input_file,
+MetaParser::MetaParser(const std::string project_input_src,
                        const std::string include_file_path,
                        const std::string include_path,
                        const std::string sys_include,
                        const std::string module_name,
                        bool              is_show_errors) :
-    m_project_input_file(project_input_file),
-    m_source_include_file_name(include_file_path), m_index(nullptr), m_translation_unit(nullptr),
-    m_sys_include(sys_include), m_module_name(module_name), m_is_show_errors(is_show_errors)
+    m_project_input_src(project_input_src),
+    m_source_include_file_name(include_file_path), m_index(nullptr), m_translation_unit(nullptr), m_sys_include(sys_include), m_module_name(module_name), m_is_show_errors(is_show_errors)
 {
     m_work_paths = Utils::split(include_path, ";");
 
-    m_generators.emplace_back(new Generator::SerializerGenerator(
-        m_work_paths[0], std::bind(&MetaParser::getIncludeFile, this, std::placeholders::_1)));
-    m_generators.emplace_back(new Generator::ReflectionGenerator(
-        m_work_paths[0], std::bind(&MetaParser::getIncludeFile, this, std::placeholders::_1)));
+    m_generators.emplace_back(new Generator::SerializerGenerator(m_work_paths[0], std::bind(&MetaParser::getIncludeFile, this, std::placeholders::_1)));
+    m_generators.emplace_back(new Generator::ReflectionGenerator(m_work_paths[0], std::bind(&MetaParser::getIncludeFile, this, std::placeholders::_1)));
 }
 
 MetaParser::~MetaParser(void)
@@ -83,24 +82,38 @@ void MetaParser::finish(void)
 bool MetaParser::parseProject()
 {
     bool result = true;
-    std::cout << "Parsing project file: " << m_project_input_file << std::endl;
+    std::cout << "Parsing project src: " << m_project_input_src << std::endl;
 
-    std::fstream include_txt_file(m_project_input_file, std::ios::in);
+    std::vector<std::string> inlcude_files {};
 
-    if (include_txt_file.fail())
+    if (std::filesystem::exists(m_project_input_src) && std::filesystem::is_directory(m_project_input_src))
     {
-        std::cout << "Could not load file: " << m_project_input_file << std::endl;
-        return false;
+        for (auto const& entry : std::filesystem::recursive_directory_iterator {m_project_input_src})
+        {
+            if (entry.is_regular_file() && entry.path().extension() == ".h")
+            {
+                std::cout << entry.path() << ", " << entry.path().extension() << std::endl;
+                inlcude_files.emplace_back(entry.path().generic_string());
+            }
+        }
     }
 
-    std::stringstream buffer;
-    buffer << include_txt_file.rdbuf();
+    // std::fstream include_txt_file(m_project_input_src, std::ios::in);
 
-    std::string context = buffer.str();
+    // if (include_txt_file.fail())
+    // {
+    //     std::cout << "Could not load file: " << m_project_input_src << std::endl;
+    //     return false;
+    // }
 
-    auto         inlcude_files = Utils::split(context, ";");
+    // std::stringstream buffer;
+    // buffer << include_txt_file.rdbuf();
+
+    // std::string context = buffer.str();
+
+    // auto inlcude_files = Utils::split(context, ";");
+
     std::fstream include_file;
-
     include_file.open(m_source_include_file_name, std::ios::out);
     if (!include_file.is_open())
     {
@@ -172,9 +185,8 @@ int MetaParser::parse(void)
         return -2;
     }
 
-    m_translation_unit = clang_createTranslationUnitFromSourceFile(
-        m_index, m_source_include_file_name.c_str(), static_cast<int>(arguments.size()), arguments.data(), 0, nullptr);
-    auto cursor = clang_getTranslationUnitCursor(m_translation_unit);
+    m_translation_unit = clang_createTranslationUnitFromSourceFile(m_index, m_source_include_file_name.c_str(), static_cast<int>(arguments.size()), arguments.data(), 0, nullptr);
+    auto cursor        = clang_getTranslationUnitCursor(m_translation_unit);
 
     Namespace temp_namespace;
 

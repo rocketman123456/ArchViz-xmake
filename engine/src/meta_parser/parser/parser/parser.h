@@ -17,7 +17,7 @@ class MetaParser
 public:
     static void prepare(void);
 
-    MetaParser(const std::string project_input_file,
+    MetaParser(const std::string project_input_src,
                const std::string include_file_path,
                const std::string include_path,
                const std::string include_sys,
@@ -29,7 +29,7 @@ public:
     void generateFiles(void);
 
 private:
-    std::string m_project_input_file;
+    std::string m_project_input_src;
 
     std::vector<std::string> m_work_paths;
     std::string              m_module_name;
@@ -42,17 +42,7 @@ private:
     std::unordered_map<std::string, std::string>  m_type_table;
     std::unordered_map<std::string, SchemaMoudle> m_schema_modules;
 
-    std::vector<const char*>                    arguments = {{"-x",
-                                           "c++",
-                                           "-std=c++11",
-                                           "-D__REFLECTION_PARSER__",
-                                           "-DNDEBUG",
-                                           "-D__clang__",
-                                           "-w",
-                                           "-MG",
-                                           "-M",
-                                           "-ferror-limit=0",
-                                           "-o clangLog.txt"}};
+    std::vector<const char*> arguments = {{"-x", "c++", "-std=c++11", "-D__REFLECTION_PARSER__", "-DNDEBUG", "-D__clang__", "-w", "-MG", "-M", "-ferror-limit=0", "-o clangLog.txt"}};
     std::vector<Generator::GeneratorInterface*> m_generators;
 
     bool m_is_show_errors;
