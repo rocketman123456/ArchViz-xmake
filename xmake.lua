@@ -22,6 +22,7 @@ includes("engine/3rd_party/xmake.lua")
 
 add_requires("json11", {configs = {shared = false, debug = true}})
 -- add_requires("llvm", {configs = {system = true}})
+-- add_requires("clang", {system = true})
 
 includes("engine")
 

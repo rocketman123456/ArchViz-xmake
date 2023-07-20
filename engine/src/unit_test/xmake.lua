@@ -1,7 +1,7 @@
 target("test", function ()
     set_kind("binary")
     add_files("main.cpp")
-    add_deps("ArchVizRuntime")
+    -- add_deps("ArchVizRuntime")
     after_build(function (target)
         import("core.project.config")
         local targetfile = target:targetfile()

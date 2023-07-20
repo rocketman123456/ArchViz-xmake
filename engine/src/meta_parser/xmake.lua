@@ -13,7 +13,7 @@ target("meta_parser", function ()
         add_links("libclang")
     elseif is_plat("linux") then 
         add_linkdirs("$(projectdir)/engine/3rd_party/llvm_lib/lib/linux")
-        add_links("libclang")
+        add_links("$(projectdir)/engine/3rd_party/llvm_lib/lib/linux/libclang-14.so")
     end
     on_load(function (target)
         if is_plat("linux", "macosx") then
