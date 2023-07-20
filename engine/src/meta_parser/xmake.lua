@@ -20,7 +20,7 @@ target("meta_parser", function ()
             target:add("links", "pthread", "m", "dl")
         end
     end)
-    after_build(function (target)
+    after_install(function (target)
         import("core.project.config")
         local targetfile = target:targetfile()
         os.mkdir("$(projectdir)/bin/tool")
@@ -53,7 +53,7 @@ target("meta_parser", function ()
         -- project_input_src include_file_path include_path include_sys module_name is_show_errors
         local cmd= ". " .. parser .. " " .. params .. " " .. ipnut .. " " .. source_dir .. " " .. include_dir .. " " .. namespace .." 0"
         print(cmd)
-        -- os.exec(cmd);
+        os.exec(cmd);
 
         print("*************************************************************")
         print("**** [Precompile] Finish ")
