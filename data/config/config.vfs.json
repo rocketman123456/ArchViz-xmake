@@ -1,0 +1,16 @@
+{
+    "configs": [
+        {
+            "vpath": "asset",
+            "rpath": "asset-test",
+            "type": "native",
+            "ignores": []
+        },
+        {
+            "vpath": "shader",
+            "rpath": "shader",
+            "type": "native",
+            "ignores": []
+        }
+    ]
+}
