@@ -22,9 +22,17 @@ target("meta_parser", function ()
     end)
     after_build(function (target)
         import("core.project.config")
+
         local targetfile = target:targetfile()
         os.mkdir("$(projectdir)/bin/tool")
         os.cp(targetfile, path.join("$(projectdir)/bin/tool", path.filename(targetfile)))
+        if is_plat("windows") then 
+            os.cp("$(projectdir)/engine/3rd_party/llvm_lib/bin/windows/*.dll", "$(projectdir)/bin/tool")
+        elseif is_plat("macos") then 
+            os.cp("$(projectdir)/engine/3rd_party/llvm_lib/bin/windows/*.dylib", "$(projectdir)/bin/tool")
+        elseif is_plat("linux") then 
+            os.cp("$(projectdir)/engine/3rd_party/llvm_lib/bin/windows/*.so", "$(projectdir)/bin/tool")
+        end
         print("build %s", targetfile)
 
         print("*************************************************************")

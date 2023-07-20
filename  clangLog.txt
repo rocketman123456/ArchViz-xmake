@@ -83,4 +83,89 @@ parser_header.o: \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\cstring \
   C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\string.h \
   C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_memory.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\__msvc_sanitizer_annotate_container.hpp
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\__msvc_sanitizer_annotate_container.hpp \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\base\macro.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\log\log_system.h \
+  spdlog\spdlog.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\stdexcept \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xstring \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\iosfwd \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\cassert \
+  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\assert.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\chrono \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\__msvc_chrono.hpp \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\ctime \
+  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\time.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\ratio \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xtimec.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\thread \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\typeinfo \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_typeinfo.h \
+  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\process.h \
+  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_startup.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_startup.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xthreads.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\curve\bezier_curve.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\curve\cubic_curve.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\geometry\axis_aligned.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\vector\vector3.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\math.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\math_type.h \
+  eigen3\Eigen\Eigen \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\random.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\algorithm \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\random \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\__msvc_int128.hpp \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\cmath \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\ios \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xlocnum \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\iterator \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\streambuf \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xiosbase \
+  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\share.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\system_error \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\__msvc_system_error_abi.hpp \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\cerrno \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xcall_once.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xerrc.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\atomic \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xlocale \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xfacet \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xlocinfo \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\__msvc_xlocinfo_types.hpp \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\cctype \
+  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\ctype.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\clocale \
+  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\locale.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xbit_ops.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\quaternion.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\reflection\reflection.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\json.h \
+  json11.hpp \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\functional \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\string \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\unordered_map \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xhash \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\list \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\unordered_set \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\geometry\frustum.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\matrix\matrix4.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\matrix\matrix3.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\vector\vector4.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\array \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\geometry\trackball.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\numeric \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\math_headers.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\math_marcos.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\matrix\matrix2.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\vector\vector2.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\transform.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\matrix\matrixN.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\vector\vectorN.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\solver\lcp.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\meta_example.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\reflection\reflection_register.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\serializer\serializer.h \
+  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\string\string_utils.h

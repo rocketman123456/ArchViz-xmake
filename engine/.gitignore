@@ -1,7 +1,2 @@
 _generated/
-reflection_gen/
-serializer_gen/
-!*.lib
-!*.dll
-!*.so
-!*.dylib
+
