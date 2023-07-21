@@ -49,6 +49,8 @@ build/
 
 script/precompile.sh
 
+*Log.txt
+
 # Assets that are part of the asset pack and should not be stored in the repo
 engine/asset/data/models/**
 engine/asset/data/textures/**
