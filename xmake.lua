@@ -17,14 +17,13 @@ end
 -- option("test2", {default = true, showmenu = true})
 -- option("test3", {default = "hello"})
 
+-- includes("engine/src/meta_parser/xmake.lua")
 -- includes("xmake/precompile.lua")
 includes("engine/3rd_party/xmake.lua")
 
 add_requires("json11", {configs = {shared = false, debug = true}})
 add_requires("spdlog", {configs = {shared = false, debug = true}})
 add_requires("eigen", {configs = {shared = false, debug = true}})
--- add_requires("llvm", {configs = {system = true}})
--- add_requires("clang", {system = true})
 
 includes("engine")
 

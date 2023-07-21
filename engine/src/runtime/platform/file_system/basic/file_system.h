@@ -1,11 +1,11 @@
 #pragma once
 #include "runtime/core/meta/reflection/reflection.h"
-#include "runtime/core/thread/thread_pool.h"
+// #include "runtime/core/thread/thread_pool.h"
 
 #include "runtime/platform/file_system/basic/file.h"
 
 #include <algorithm>
-#include <future>
+// #include <future>
 
 namespace ArchViz
 {
@@ -44,25 +44,25 @@ namespace ArchViz
         size_t read(FilePtr file, std::string& buffer) { return file->read(buffer); }
         size_t write(FilePtr file, const std::string& buffer) { return file->write(buffer); }
 
-        std::future<size_t> readAsync(std::shared_ptr<WorkExecutor> tp, FilePtr file, std::vector<std::byte>& buffer)
-        {
-            return tp->enqueue_task([file, &buffer]() { return file->read(buffer); });
-        }
+        // std::future<size_t> readAsync(std::shared_ptr<WorkExecutor> tp, FilePtr file, std::vector<std::byte>& buffer)
+        // {
+        //     return tp->enqueue_task([file, &buffer]() { return file->read(buffer); });
+        // }
 
-        std::future<size_t> writeAsync(std::shared_ptr<WorkExecutor> tp, FilePtr file, const std::vector<std::byte>& buffer)
-        {
-            return tp->enqueue_task([file, &buffer]() { return file->write(buffer); });
-        }
+        // std::future<size_t> writeAsync(std::shared_ptr<WorkExecutor> tp, FilePtr file, const std::vector<std::byte>& buffer)
+        // {
+        //     return tp->enqueue_task([file, &buffer]() { return file->write(buffer); });
+        // }
 
-        std::future<size_t> readAsync(std::shared_ptr<WorkExecutor> tp, FilePtr file, std::string& buffer)
-        {
-            return tp->enqueue_task([file, &buffer]() { return file->read(buffer); });
-        }
+        // std::future<size_t> readAsync(std::shared_ptr<WorkExecutor> tp, FilePtr file, std::string& buffer)
+        // {
+        //     return tp->enqueue_task([file, &buffer]() { return file->read(buffer); });
+        // }
 
-        std::future<size_t> writeAsync(std::shared_ptr<WorkExecutor> tp, FilePtr file, const std::string& buffer)
-        {
-            return tp->enqueue_task([file, &buffer]() { return file->write(buffer); });
-        }
+        // std::future<size_t> writeAsync(std::shared_ptr<WorkExecutor> tp, FilePtr file, const std::string& buffer)
+        // {
+        //     return tp->enqueue_task([file, &buffer]() { return file->write(buffer); });
+        // }
 
         // TODO
         // virtual bool createFile(const std::string& file_path) = 0;

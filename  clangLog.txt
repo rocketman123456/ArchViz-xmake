@@ -1,6 +1,6 @@
 parser_header.o: \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\build\parser_header.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\base\crc.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\build\parser_header.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\base\crc.h \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\cstddef \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\yvals_core.h \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime.h \
@@ -84,8 +84,8 @@ parser_header.o: \
   C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\string.h \
   C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_memory.h \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\__msvc_sanitizer_annotate_container.hpp \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\base\macro.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\log\log_system.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\base\macro.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\log\log_system.h \
   spdlog\spdlog.h \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\stdexcept \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xstring \
@@ -107,14 +107,14 @@ parser_header.o: \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_startup.h \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xthreads.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\curve\bezier_curve.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\curve\cubic_curve.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\geometry\axis_aligned.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\vector\vector3.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\math.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\math_type.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\curve\bezier_curve.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\curve\cubic_curve.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\geometry\axis_aligned.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\vector\vector3.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\math.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\math_type.h \
   eigen3\Eigen\Eigen \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\random.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\random.h \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\algorithm \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\random \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\__msvc_int128.hpp \
@@ -140,9 +140,9 @@ parser_header.o: \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\clocale \
   C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\locale.h \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xbit_ops.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\quaternion.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\reflection\reflection.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\json.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\quaternion.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\reflection\reflection.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\json.h \
   json11.hpp \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\functional \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\string \
@@ -150,22 +150,39 @@ parser_header.o: \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\xhash \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\list \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\unordered_set \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\geometry\frustum.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\matrix\matrix4.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\matrix\matrix3.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\vector\vector4.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\geometry\frustum.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\matrix\matrix4.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\matrix\matrix3.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\vector\vector4.h \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\array \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\geometry\trackball.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\geometry\trackball.h \
   C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\numeric \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\math_headers.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\math_marcos.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\matrix\matrix2.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\vector\vector2.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\transform.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\matrix\matrixN.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\vector\vectorN.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\solver\lcp.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\meta_example.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\reflection\reflection_register.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\serializer\serializer.h \
-  C:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\string\string_utils.h
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\math_headers.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\math_marcos.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\matrix\matrix2.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\vector\vector2.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\transform.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\matrix\matrixN.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\vector\vectorN.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\math\solver\lcp.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\meta_example.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\reflection\reflection_register.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\meta\serializer\serializer.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\core\string\string_utils.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\platform\file_service\file_service.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\filesystem \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\platform\file_system\basic\file.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\platform\file_system\basic\file_system.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\platform\file_system\basic\file_utils.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\platform\file_system\memory_file\memory_file.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\platform\file_system\memory_file\memory_file_system.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\platform\file_system\native_file\native_file.h \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\fstream \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\istream \
+  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\ostream \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\platform\file_system\native_file\native_file_system.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\platform\file_system\remote_file\remote_file.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\platform\file_system\remote_file\remote_file_system.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\platform\file_system\vfs.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\platform\file_system\vfs_config.h \
+  c:\Users\RoccketSky\Desktop\Engine\ArchViz-xmake\engine\src\runtime\platform\path\path.h

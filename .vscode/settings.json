@@ -113,7 +113,7 @@
     "editor.guides.highlightActiveIndentation": false, // 禁用高亮选中的缩进指导线
     "editor.guides.indentation": false, // 禁用缩进指导线
     "editor.semanticHighlighting.enabled": true, // 启用语义高亮
-    "workbench.colorTheme": "Material Theme Palenight", // 颜色主题
+    "workbench.colorTheme": "Material Theme Darker", // 颜色主题
     "workbench.iconTheme": "gruvbox-material-icon-theme", // 图标主题
     "workbench.startupEditor": "none", // 在没有从上一个会话恢复出信息的情况下，在启动时不打开编辑器
     "workbench.view.alwaysShowHeaderActions": true, // 显示视图头部的操作项

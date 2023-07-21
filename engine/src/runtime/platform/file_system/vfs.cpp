@@ -5,8 +5,6 @@
 #include "runtime/platform/file_system/memory_file/memory_file_system.h"
 #include "runtime/platform/file_system/native_file/native_file.h"
 #include "runtime/platform/file_system/native_file/native_file_system.h"
-#include "runtime/platform/file_system/zip_file/zip_file.h"
-#include "runtime/platform/file_system/zip_file/zip_file_system.h"
 
 // #include "runtime/function/global/global_context.h"
 // #include "runtime/resource/config_manager/config_manager.h"
@@ -38,9 +36,7 @@ namespace ArchViz
         }
         else if (fs.m_type == "compress-zip")
         {
-            auto root  = std::string(""); // g_runtime_global_context.m_config_manager->getRootFolder().string();
-            auto rpath = combine_path(root, fs.m_rpath);
-            m_fs.emplace_back(std::make_shared<ZipFileSystem>(fs.m_vpath, rpath, fs));
+            // TODO
         }
     }
 
@@ -96,7 +92,7 @@ namespace ArchViz
 
     size_t VFS::write(FilePtr file, const std::vector<std::byte>& buffer) { return file->write(buffer); }
 
-    std::future<size_t> VFS::readAsync(std::shared_ptr<WorkExecutor> tp, FilePtr file, std::vector<std::byte>& buffer) { return tp->enqueue_task(&VFS::read, this, file, buffer); }
+    // std::future<size_t> VFS::readAsync(std::shared_ptr<WorkExecutor> tp, FilePtr file, std::vector<std::byte>& buffer) { return tp->enqueue_task(&VFS::read, this, file, buffer); }
 
-    std::future<size_t> VFS::writeAsync(std::shared_ptr<WorkExecutor> tp, FilePtr file, const std::vector<std::byte>& buffer) { return tp->enqueue_task(&VFS::write, this, file, buffer); }
+    // std::future<size_t> VFS::writeAsync(std::shared_ptr<WorkExecutor> tp, FilePtr file, const std::vector<std::byte>& buffer) { return tp->enqueue_task(&VFS::write, this, file, buffer); }
 } // namespace ArchViz

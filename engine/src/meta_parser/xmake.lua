@@ -20,7 +20,7 @@ target("meta_parser", function ()
             target:add("links", "pthread", "m", "dl")
         end
     end)
-    after_build(function (target)
+    on_load(function (target)
         import("core.project.config")
 
         local targetfile = target:targetfile()
@@ -35,16 +35,11 @@ target("meta_parser", function ()
         end
         print("build %s", targetfile)
 
-        print("*************************************************************")
-        print("**** [Precompile] Begin ")
-        print("*************************************************************")
-        print("")
-
         local parser = ""
         if is_plat("linux", "macos") then
             parser = "$(projectdir)/bin/tool/meta_parser"
         elseif is_plat("windows") then
-            parser = ". $(projectdir)/bin/tool/meta_parser.exe"
+            parser = "$(projectdir)/bin/tool/meta_parser.exe"
         end
         local params = "\"$(projectdir)/engine/src/runtime\""
         local ipnut = "\"$(projectdir)/build/parser_header.h\""
@@ -58,21 +53,22 @@ target("meta_parser", function ()
         local namespace = "ArchViz"
         local opt = 0
 
-        -- project_input_src include_file_path include_path include_sys module_name is_show_errors
-        local cmd= parser .. " " .. params .. " " .. ipnut .. " " .. source_dir .. " " .. include_dir .. " " .. namespace .." 0"
-        print(cmd)
-        print("")
-        -- os.exec(cmd);
+        local file, err = io.open(parser, "r")
+        if err == nil then 
+            print("*************************************************************")
+            print("**** [Precompile] Begin ")
+            print("*************************************************************")
+            print("")
+            -- project_input_src include_file_path include_path include_sys module_name is_show_errors
+            local cmd= parser .. " " .. params .. " " .. ipnut .. " " .. source_dir .. " " .. include_dir .. " " .. namespace .." 0"
+            print(cmd)
+            print("")
+            os.exec(cmd);
 
-        os.mkdir("$(projectdir)/script")
-        local file = io.open("$(projectdir)/script/precompile.sh", "w")
-        file:write(cmd)
-        file:close()
-        -- os.exec(". script/precompile.sh");
-
-        print("*************************************************************")
-        print("**** [Precompile] Finish ")
-        print("*************************************************************")
-        print("")
+            print("*************************************************************")
+            print("**** [Precompile] Finish ")
+            print("*************************************************************")
+            print("")
+        end
     end)
 end)
