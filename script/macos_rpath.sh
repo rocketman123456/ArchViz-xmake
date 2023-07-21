@@ -1,0 +1,1 @@
+install_name_tool -change "@rpath/libclang.dylib" "@executable_path/libclang.dylib" bin/tool/meta_parser

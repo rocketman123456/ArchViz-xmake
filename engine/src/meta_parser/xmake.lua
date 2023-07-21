@@ -5,22 +5,25 @@ target("meta_parser", function ()
     add_includedirs("$(projectdir)/engine/3rd_party/mustache")
     add_includedirs("$(projectdir)/engine/3rd_party/llvm_lib/include")
     add_includedirs("$(projectdir)/engine/src/meta_parser/parser")
+
     if is_plat("windows") then 
         add_linkdirs("$(projectdir)/engine/3rd_party/llvm_lib/lib/windows")
         add_links("libclang")
-    elseif is_plat("macos") then 
+    elseif is_plat("macosx") then 
         add_linkdirs("$(projectdir)/engine/3rd_party/llvm_lib/lib/macos")
-        add_links("libclang")
+        add_links("$(projectdir)/engine/3rd_party/llvm_lib/lib/macos/libclang.dylib")
     elseif is_plat("linux") then 
         -- work on ubuntu 22.04, should try more systems
         add_linkdirs("$(projectdir)/engine/3rd_party/llvm_lib/lib/linux")
-        add_links("$(projectdir)/engine/3rd_party/llvm_lib/lib/linux/libclang-14.so")
+        add_links("$(projectdir)/engine/3rd_party/llvm_lib/lib/linux/libclang.so.12")
     end
+
     on_load(function (target)
         if is_plat("linux", "macosx") then
             target:add("links", "pthread", "m", "dl")
         end
     end)
+
     on_load(function (target)
         import("core.project.config")
 
@@ -64,10 +67,11 @@ target("meta_parser", function ()
         os.cp(targetfile, path.join("$(projectdir)/bin/tool", path.filename(targetfile)))
         if is_plat("windows") then 
             os.cp("$(projectdir)/engine/3rd_party/llvm_lib/bin/windows/*.dll", "$(projectdir)/bin/tool")
-        elseif is_plat("macos") then 
-            os.cp("$(projectdir)/engine/3rd_party/llvm_lib/bin/windows/*.dylib", "$(projectdir)/bin/tool")
+        elseif is_plat("macosx") then 
+            os.cp("$(projectdir)/engine/3rd_party/llvm_lib/bin/macos/*.dylib", "$(projectdir)/bin/tool")
+            os.cp("$(projectdir)/engine/3rd_party/llvm_lib/lib/macos/*.dylib", "$(projectdir)/bin/tool")
         elseif is_plat("linux") then 
-            os.cp("$(projectdir)/engine/3rd_party/llvm_lib/bin/windows/*.so", "$(projectdir)/bin/tool")
+            os.cp("$(projectdir)/engine/3rd_party/llvm_lib/bin/linux/*.so", "$(projectdir)/bin/tool")
         end
         print("build %s", targetfile)
     end)
