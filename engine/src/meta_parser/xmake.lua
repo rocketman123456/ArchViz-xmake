@@ -39,8 +39,7 @@ target("meta_parser", function ()
         local namespace = "ArchViz"
         local opt = 0
 
-        local file, err = io.open(parser, "r")
-        if err == nil then 
+        if os.isfile(parser) then 
             print("*************************************************************")
             print("**** [Precompile] Begin ")
             print("*************************************************************")

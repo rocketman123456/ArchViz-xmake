@@ -1,9 +1,9 @@
 /*==-- clang-c/BuildSystem.h - Utilities for use by build systems -*- C -*-===*\
 |*                                                                            *|
-|* Part of the LLVM Project, under the Apache License v2.0 with LLVM          *|
-|* Exceptions.                                                                *|
-|* See https://llvm.org/LICENSE.txt for license information.                  *|
-|* SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception                    *|
+|*                     The LLVM Compiler Infrastructure                       *|
+|*                                                                            *|
+|* This file is distributed under the University of Illinois Open Source      *|
+|* License. See LICENSE.TXT for details.                                      *|
 |*                                                                            *|
 |*===----------------------------------------------------------------------===*|
 |*                                                                            *|
@@ -14,12 +14,13 @@
 #ifndef LLVM_CLANG_C_BUILDSYSTEM_H
 #define LLVM_CLANG_C_BUILDSYSTEM_H
 
+#include "clang-c/Platform.h"
 #include "clang-c/CXErrorCode.h"
 #include "clang-c/CXString.h"
-#include "clang-c/ExternC.h"
-#include "clang-c/Platform.h"
 
-LLVM_CLANG_C_EXTERN_C_BEGIN
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /**
  * \defgroup BUILD_SYSTEM Build system utilities
@@ -117,7 +118,7 @@ clang_ModuleMapDescriptor_setFrameworkModuleName(CXModuleMapDescriptor,
                                                  const char *name);
 
 /**
- * Sets the umbrella header name that the module.map describes.
+ * Sets the umbrealla header name that the module.map describes.
  * \returns 0 for success, non-zero to indicate an error.
  */
 CINDEX_LINKAGE enum CXErrorCode
@@ -147,7 +148,9 @@ CINDEX_LINKAGE void clang_ModuleMapDescriptor_dispose(CXModuleMapDescriptor);
  * @}
  */
 
-LLVM_CLANG_C_EXTERN_C_END
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* CLANG_C_BUILD_SYSTEM_H */
 

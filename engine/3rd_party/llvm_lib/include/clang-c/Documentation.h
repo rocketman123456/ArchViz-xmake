@@ -1,9 +1,9 @@
 /*==-- clang-c/Documentation.h - Utilities for comment processing -*- C -*-===*\
 |*                                                                            *|
-|* Part of the LLVM Project, under the Apache License v2.0 with LLVM          *|
-|* Exceptions.                                                                *|
-|* See https://llvm.org/LICENSE.txt for license information.                  *|
-|* SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception                    *|
+|*                     The LLVM Compiler Infrastructure                       *|
+|*                                                                            *|
+|* This file is distributed under the University of Illinois Open Source      *|
+|* License. See LICENSE.TXT for details.                                      *|
 |*                                                                            *|
 |*===----------------------------------------------------------------------===*|
 |*                                                                            *|
@@ -15,10 +15,11 @@
 #ifndef LLVM_CLANG_C_DOCUMENTATION_H
 #define LLVM_CLANG_C_DOCUMENTATION_H
 
-#include "clang-c/ExternC.h"
 #include "clang-c/Index.h"
 
-LLVM_CLANG_C_EXTERN_C_BEGIN
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /**
  * \defgroup CINDEX_COMMENT Comment introspection
@@ -181,12 +182,7 @@ enum CXCommentInlineCommandRenderKind {
    * Command argument should be rendered emphasized (typically italic
    * font).
    */
-  CXCommentInlineCommandRenderKind_Emphasized,
-
-  /**
-   * Command argument should not be rendered (since it only defines an anchor).
-   */
-  CXCommentInlineCommandRenderKind_Anchor
+  CXCommentInlineCommandRenderKind_Emphasized
 };
 
 /**
@@ -549,7 +545,10 @@ CINDEX_LINKAGE CXString clang_FullComment_getAsXML(CXComment Comment);
  * @}
  */
 
-LLVM_CLANG_C_EXTERN_C_END
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* CLANG_C_DOCUMENTATION_H */
 
