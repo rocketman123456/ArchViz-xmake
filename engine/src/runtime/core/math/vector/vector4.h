@@ -171,7 +171,7 @@ namespace ArchViz
             return *this;
         }
 
-        float length() const { return std::sqrtf(x * x + y * y + z * z + w * w); }
+        float length() const { return Math::sqrt(x * x + y * y + z * z + w * w); }
 
         float squaredLength() const { return x * x + y * y + z * z + w * w; }
 
