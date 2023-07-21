@@ -12,6 +12,7 @@ target("meta_parser", function ()
         add_linkdirs("$(projectdir)/engine/3rd_party/llvm_lib/lib/macos")
         add_links("libclang")
     elseif is_plat("linux") then 
+        -- work on ubuntu 22.04, should try more systems
         add_linkdirs("$(projectdir)/engine/3rd_party/llvm_lib/lib/linux")
         add_links("$(projectdir)/engine/3rd_party/llvm_lib/lib/linux/libclang-14.so")
     end
@@ -24,23 +25,8 @@ target("meta_parser", function ()
         import("core.project.config")
 
         local targetfile = target:targetfile()
-        os.mkdir("$(projectdir)/bin/tool")
-        os.cp(targetfile, path.join("$(projectdir)/bin/tool", path.filename(targetfile)))
-        if is_plat("windows") then 
-            os.cp("$(projectdir)/engine/3rd_party/llvm_lib/bin/windows/*.dll", "$(projectdir)/bin/tool")
-        elseif is_plat("macos") then 
-            os.cp("$(projectdir)/engine/3rd_party/llvm_lib/bin/windows/*.dylib", "$(projectdir)/bin/tool")
-        elseif is_plat("linux") then 
-            os.cp("$(projectdir)/engine/3rd_party/llvm_lib/bin/windows/*.so", "$(projectdir)/bin/tool")
-        end
-        print("build %s", targetfile)
 
-        local parser = ""
-        if is_plat("linux", "macos") then
-            parser = "$(projectdir)/bin/tool/meta_parser"
-        elseif is_plat("windows") then
-            parser = "$(projectdir)/bin/tool/meta_parser.exe"
-        end
+        local parser = path.join("$(projectdir)/bin/tool", path.filename(targetfile))
         local params = "\"$(projectdir)/engine/src/runtime\""
         local ipnut = "\"$(projectdir)/build/parser_header.h\""
         local source_dir = "\"$(projectdir)/engine/src\""
@@ -60,7 +46,7 @@ target("meta_parser", function ()
             print("*************************************************************")
             print("")
             -- project_input_src include_file_path include_path include_sys module_name is_show_errors
-            local cmd= parser .. " " .. params .. " " .. ipnut .. " " .. source_dir .. " " .. include_dir .. " " .. namespace .." 0"
+            local cmd= parser .. " " .. params .. " " .. ipnut .. " " .. source_dir .. " " .. include_dir .. " " .. namespace .. " " .. opt
             print(cmd)
             print("")
             os.exec(cmd);
@@ -70,5 +56,20 @@ target("meta_parser", function ()
             print("*************************************************************")
             print("")
         end
+    end)
+    after_build(function (target)
+        import("core.project.config")
+
+        local targetfile = target:targetfile()
+        os.mkdir("$(projectdir)/bin/tool")
+        os.cp(targetfile, path.join("$(projectdir)/bin/tool", path.filename(targetfile)))
+        if is_plat("windows") then 
+            os.cp("$(projectdir)/engine/3rd_party/llvm_lib/bin/windows/*.dll", "$(projectdir)/bin/tool")
+        elseif is_plat("macos") then 
+            os.cp("$(projectdir)/engine/3rd_party/llvm_lib/bin/windows/*.dylib", "$(projectdir)/bin/tool")
+        elseif is_plat("linux") then 
+            os.cp("$(projectdir)/engine/3rd_party/llvm_lib/bin/windows/*.so", "$(projectdir)/bin/tool")
+        end
+        print("build %s", targetfile)
     end)
 end)
