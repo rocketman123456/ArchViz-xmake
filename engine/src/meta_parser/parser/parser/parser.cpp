@@ -92,26 +92,11 @@ bool MetaParser::parseProject()
         {
             if (entry.is_regular_file() && entry.path().extension() == ".h")
             {
-                std::cout << entry.path() << ", " << entry.path().extension() << std::endl;
+                std::cout << entry.path() << std::endl;
                 inlcude_files.emplace_back(entry.path().generic_string());
             }
         }
     }
-
-    // std::fstream include_txt_file(m_project_input_src, std::ios::in);
-
-    // if (include_txt_file.fail())
-    // {
-    //     std::cout << "Could not load file: " << m_project_input_src << std::endl;
-    //     return false;
-    // }
-
-    // std::stringstream buffer;
-    // buffer << include_txt_file.rdbuf();
-
-    // std::string context = buffer.str();
-
-    // auto inlcude_files = Utils::split(context, ";");
 
     std::fstream include_file;
     include_file.open(m_source_include_file_name, std::ios::out);
