@@ -1,5 +1,8 @@
 #include "runtime/core/string/string_utils.h"
 
+#include <climits>
+#include <limits>
+
 namespace ArchViz
 {
     void split_multi_char(const std::string& in, const std::string& token, std::vector<std::string>& out)
@@ -124,7 +127,7 @@ namespace ArchViz
                 std::size_t lpbest      = left_size;
                 std::size_t rpbest      = right_size;
                 std::size_t total_count = 0;
-                std::size_t best_count  = INT_MAX;
+                std::size_t best_count  = std::numeric_limits<int>::max();
                 std::size_t left_count  = 0;
                 std::size_t right_count = 0;
                 for (auto lp = left_ptr; (lp < left_size) && ((left_count + right_count) < best_count); ++lp)
